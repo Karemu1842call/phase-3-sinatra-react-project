@@ -10,13 +10,13 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
-  
+
 production:
   adapter: postgresql
-  database: <database_name>
-  username: <username>
-  password: <password>
-  host: <host>
-  port: <port>
+  database: railway
+  username: postgres
+  password: 8ImdrtG31E7Qk1tjBtdu
+  host: containers-us-west-34.railway.app
+  port: 6621
   pool: 5
 ##code connecting our database
