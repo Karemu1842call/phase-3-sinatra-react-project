@@ -4,11 +4,6 @@ source "https://rubygems.org"
 # https://github.com/sinatra/sinatra
 gem "sinatra", "~> 2.1"
 
-  group :production do
-      gem 'puma', '~> 6.1', '>= 6.1.1'
-      gem 'pg', '~> 1.4', '>= 1.4.6'
-  end
-
 # A fast and simple web server
 # https://github.com/macournoyer/thin
 gem "thin", "~> 1.8"
