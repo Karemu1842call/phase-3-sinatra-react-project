@@ -10,6 +10,8 @@ puts "🌱 Seeding spices..."
     )
   end
 
+  puts "🌱 1st seed done"
+
 
 Landlord.all.each do |landlord|
   10.times do
@@ -23,13 +25,14 @@ Landlord.all.each do |landlord|
     )
   end
 end
+puts "🌱 2nd seed done"
 
 Property.all.each do |property|
   10.times do
     Tenant.create(
       name: Faker::Name.name(),
       email: Faker::Internet.email(),
-      phone_number: Faker::Number.number(digits: 10),
+      phone_number: Faker::Number.number(digits: 9),
       rent: Faker::Number.between(from: 10000, to: 60000),
       property_id: property.id
 
