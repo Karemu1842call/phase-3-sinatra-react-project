@@ -12,6 +12,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
-##code connecting our database
+  adapter: postgresql
+  database: <database_name>
+  username: <username>
+  password: <password>
+  host: <host>
+  port: <port>
+  pool: 5

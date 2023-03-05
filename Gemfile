@@ -1,3 +1,8 @@
+  group :production do
+      gem 'puma', '~> 6.1', '>= 6.1.1'
+      gem 'pg', '~> 1.4', '>= 1.4.6'
+  end
+
 gem "faker"
 source "https://rubygems.org"
 # A DSL for quickly creating web applications
