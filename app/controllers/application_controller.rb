@@ -77,7 +77,19 @@ class ApplicationController < Sinatra::Base
       email: params[:email],
       phone_number: params[:phone_number],
       property_id: params[:property_id],
-    ).to_json
+    ).to_jso
+  end
+
+  patch "/property/:id" do
+    property = Property.find(params[:id])
+    property.update(
+      location: params[:location],
+      property_type: params[:property_type],
+      property_name: params[:property_name],
+      property_size: params[:property_size],
+      landlord_id: params[:landlord_id]
+    )
+    property.to_json
   end
 
   #delete requests (tenant,property)
@@ -90,4 +102,6 @@ class ApplicationController < Sinatra::Base
     property = Property.find(params[:id])
     property.destroy
   end
+
+
 end
