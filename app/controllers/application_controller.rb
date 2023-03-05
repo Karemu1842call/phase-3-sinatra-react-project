@@ -80,7 +80,7 @@ class ApplicationController < Sinatra::Base
     ).to_jso
   end
 
-  patch "/property/:id" do
+  patch "/properties/:id" do
     property = Property.find(params[:id])
     property.update(
       location: params[:location],
